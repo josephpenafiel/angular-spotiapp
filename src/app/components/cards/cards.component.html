@@ -1,0 +1,15 @@
+<div class="card-columns m-5 animated fadeIn">
+    <div (click)="seeArtist(data)" *ngFor="let data of toCardComponent" class="card puntero">
+      <img [src]="data.images | noimage" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ data.name }}
+        </h5>
+
+        <p class="card-text ">
+            <span *ngFor="let artist of data.artists" class="badge badge-pill badge-success">
+              {{ artist.name }}
+            </span>
+        </p>
+      </div>
+    </div>

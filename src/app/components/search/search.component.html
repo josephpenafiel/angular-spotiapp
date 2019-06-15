@@ -1,0 +1,9 @@
+<div class="row animated fadeIn">
+  <div class="col">
+    <input #term type="text" (keyup)="searchSong(term.value)" class="form-control" placeholder="Search">
+  </div>
+</div>
+
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+
+<app-cards *ngIf="!loading"  [toCardComponent] = "artists"></app-cards>
